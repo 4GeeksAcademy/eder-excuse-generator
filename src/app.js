@@ -23,8 +23,8 @@ window.onload = function() {
     for (let index = 0; index < 4; index++) {
       let singleSegment = allSegments[index];
       let size = allSegments[index].length;
-      let randomValue = Math.floor(Math.random() * (size - 1)) + 1; //  Math.floor(Math.random() * (max - min +1))+1 define los valores minimo y maximo incluyendo ambos
-      newExcuse.push(singleSegment[randomValue]); // la posicion en el array debe ser size-1 debido a que length inicia su cuenta desde el valor 1.
+      let randomValue = Math.floor(Math.random() * size); //  Math.floor(Math.random() * (size))  define los valores minimo como 0 y max como size-1 (ejem: 0 y 3 para array-who)
+      newExcuse.push(singleSegment[randomValue]);
     }
     document.getElementById("excuse").innerHTML = newExcuse.join(" ");
   }
