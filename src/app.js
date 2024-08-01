@@ -22,8 +22,7 @@ window.onload = function() {
     let newExcuse = [];
     for (let index = 0; index < 4; index++) {
       let singleSegment = allSegments[index];
-      let size = allSegments[index].length;
-      console.log(size);
+      let size = allSegments[index].length;      
       let randomValue = Math.floor(Math.random() * (size - 1)) + 1; //  Math.floor(Math.random() * (max - min +1))+1 define los valores minimo y maximo incluyendo ambos
       newExcuse.push(singleSegment[randomValue]);
     }
