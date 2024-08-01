@@ -14,7 +14,7 @@ window.onload = function() {
     "when I was sleeping",
     "while I was exercising",
     "during my lunch",
-    "while I was praying"
+    "while I was praying",
   ];
   let allSegments = [who, action, what, when];
 
@@ -22,9 +22,9 @@ window.onload = function() {
     let newExcuse = [];
     for (let index = 0; index < 4; index++) {
       let singleSegment = allSegments[index];
-      let size = allSegments[index].length;      
+      let size = allSegments[index].length;
       let randomValue = Math.floor(Math.random() * (size - 1)) + 1; //  Math.floor(Math.random() * (max - min +1))+1 define los valores minimo y maximo incluyendo ambos
-      newExcuse.push(singleSegment[randomValue]);
+      newExcuse.push(singleSegment[randomValue]); // la posicion en el array debe ser size-1 debido a que length inicia su cuenta desde el valor 1.
     }
     document.getElementById("excuse").innerHTML = newExcuse.join(" ");
   }
